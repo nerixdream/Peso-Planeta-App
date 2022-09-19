@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, Image, Dimensions } from 'react-native';
 
+import Animated, { FadeInDown } from 'react-native-reanimated';
+
 export const Await = () => {
     return (
-        <View style={styles.container}>
+        <Animated.View style={styles.container} entering={FadeInDown}>
             <Image style={styles.image} source={require('../../assets/field.png')} resizeMode="contain" />
-        </View>
+        </Animated.View>
     );
 };
 

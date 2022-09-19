@@ -5,7 +5,7 @@ import { Text, View, StyleSheet, TextInput } from 'react-native';
 import colores from '../desing/colores';
 import fuentes from '../desing/fuentes';
 
-export const Header = ({ setPesoIngresado }) => {
+export const Header = ({ pesoIngresado, setPesoIngresado }) => {
     return (
         <View style={styles.header}>
             <Text style={styles.text}>Calcula tu peso en otro</Text>
@@ -18,6 +18,7 @@ export const Header = ({ setPesoIngresado }) => {
                     placeholderTextColor={colores.grayDark}
                     keyboardType="numeric"
                     onChangeText={setPesoIngresado}
+                    value={pesoIngresado}
                 />
             </View>
         </View>
@@ -47,12 +48,18 @@ const styles = StyleSheet.create({
         fontFamily: fuentes.fjallaone,
     },
     inputContainer: {
-        backgroundColor: colores.white,
-        width: 250,
-        borderRadius: 8,
         position: 'absolute',
         bottom: -32,
-        overflow: 'hidden',
+    },
+    input: {
+        color: colores.secondary,
+        borderRadius: 8,
+        backgroundColor: colores.white,
+        fontFamily: fuentes.opensans,
+        fontSize: 16,
+        textAlign: 'center',
+        paddingVertical: 20,
+        width: 250,
         shadowColor: colores.secondary,
         shadowOffset: {
             width: 0,
@@ -61,12 +68,5 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 8,
         elevation: 8,
-    },
-    input: {
-        color: colores.secondary,
-        fontFamily: fuentes.opensans,
-        fontSize: 16,
-        textAlign: 'center',
-        paddingVertical: 20,
     },
 });

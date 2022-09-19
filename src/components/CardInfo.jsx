@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, Dimensions } from 'react-native';
 
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
+
 // Colores y fuentes
 import colores from '../desing/colores';
 import fuentes from '../desing/fuentes';
@@ -17,24 +19,26 @@ export const CardInfo = ({ item, pesoIngresado }) => {
     };
 
     return (
-        <View style={styles.card}>
-            <View style={styles.imageContainer}>
+        <Animated.View style={styles.card} entering={FadeIn}>
+            <Animated.View style={styles.imageContainer} entering={FadeInDown.delay(200)}>
                 <Image
                     style={styles.image}
                     source={uriIMG.direccion[nombre.toLowerCase()]}
                     resizeMode="contain"
                 />
-            </View>
+            </Animated.View>
 
             <View style={styles.info}>
-                <View style={styles.result}>
+                <Animated.View style={styles.result} entering={FadeInDown.delay(250)}>
                     <Text style={styles.number}>{formatearResultado()}</Text>
                     <Text style={styles.kilo}>KG</Text>
-                </View>
+                </Animated.View>
 
-                <Text style={styles.planeta}>{nombre}</Text>
+                <Animated.Text style={styles.planeta} entering={FadeInDown.delay(280)}>
+                    {nombre}
+                </Animated.Text>
             </View>
-        </View>
+        </Animated.View>
     );
 };
 
