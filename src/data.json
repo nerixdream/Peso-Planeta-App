@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "Mercurio",
+        "gravedad": 3.7
+    },
+    {
+        "nombre": "Venus",
+        "gravedad": 8.87
+    },
+    {
+        "nombre": "Tierra",
+        "gravedad": 9.807
+    },
+    {
+        "nombre": "Marte",
+        "gravedad": 3.711
+    },
+    {
+        "nombre": "Jupiter",
+        "gravedad": 24.79
+    },
+    {
+        "nombre": "Saturno",
+        "gravedad": 10.44
+    },
+    {
+        "nombre": "Urano",
+        "gravedad": 8.87
+    },
+    {
+        "nombre": "Neptuno",
+        "gravedad": 11.15
+    },
+    {
+        "nombre": "Sol",
+        "gravedad": 274
+    },
+    {
+        "nombre": "Luna",
+        "gravedad": 1.62
+    }
+]
